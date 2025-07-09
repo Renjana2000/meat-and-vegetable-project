@@ -94,7 +94,7 @@
   <div class="total-price">Total Price : ₹{{ totalPrice }}</div>
   <div class="total-price">Total Items : {{ totalItems }}</div>
   <div class="summary-buttons">
-    <button (click)="save()" class="save-btn" [disabled]="items.length === 0">
+    <button (click)="save()" routerLink="/save" class="save-btn" [disabled]="items.length === 0">
       Save
     </button>
     <button
