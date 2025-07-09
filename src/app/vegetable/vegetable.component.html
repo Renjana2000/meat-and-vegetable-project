@@ -1,0 +1,260 @@
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">TENDER CUTS</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link active" aria-current="page" href="/home">Home</a>
+        <a class="nav-link" href="/cart">Cart</a>
+        <a class="nav-link" href="/meat">Meat</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="veg">
+  <div><b>VEGETABLE CATEGORIES</b></div>
+</div>
+
+<div class="cards-container">
+  <!-- <div class="card">
+    <img src=".//public/img/carrot.jpg" class="card-img-top" alt="Carrot">
+    <div class="card-body">
+      <h5 class="card-title">Carrot, 500g</h5>
+      <p class="card-price"><b>M.R.P 40</b></p>
+      <p class="card-delivery">Free delivery starting from Tomorrow 7 am - 10 am on orders over 499</p>
+      <div class="card-actions">
+        <button class="add-btn">Add to cart</button>
+        <a routerLink="/carrot" class="view-link">View</a>
+      </div>
+    </div>
+  </div> -->
+
+
+
+  <div class="card">
+    <img  src=".//public/img/carrot.jpg" class="card-img-top" alt="Carrot">
+    <div class="card-body">
+      <h5 class="card-title">Carrot, 500g</h5>
+      <p class="card-price"><b>M.R.P 40</b></p>
+      <p class="card-delivery">Free delivery starting from Tomorrow 7 am - 10 am on orders over 499</p>
+      <div class="card-actions">
+       <button class="add-btn" (click)="addToCart({ name: 'Carrot', price: 40, weight: '500g', img: './/public/img/carrot.jpg' })">Add to cart</button>
+      <a  routerLink="/carrot" class="view-link" >View</a>
+      </div>
+    </div>
+  </div>
+
+
+
+   <div class="card">
+    <img src=".//public/img/cauliflower.jpg" class="card-img-top" alt="Cauliflower">
+    <div class="card-body">
+      <h5 class="card-title">Cauliflower, 500g</h5>
+      <p class="card-price"><b>M.R.P 25</b></p>
+      <p class="card-delivery">Free delivery starting from Tomorrow 7 am - 10 am on orders over 499</p>
+      <div class="card-actions">
+      <button class="add-btn" (click)="addToCart({ name: 'Cauliflower' , price:25 , weight: '500g', img: './/public/img/cauliflower.jpg' })">Add to cart</button>
+      <a  routerLink="/cauliflower" class="view-link" >View</a>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div class="card">
+    <img src=".//public/img/beetroot.jpg" class="card-img-top" alt="Beetroot">
+    <div class="card-body">
+      <h5 class="card-title">Beetroot, 500g</h5>
+      <p class="card-price"><b>M.R.P 20</b></p>
+      <p class="card-delivery">Free delivery starting from Tomorrow 7 am - 10 am on orders over 499</p>
+      <div class="card-actions">
+      <button class="add-btn" (click)="addToCart({ name: 'Beetroot' , price:20 , weight:'500g',img: './/public/img/beetroot.jpg' })">Add to cart</button>
+      <a  routerLink="/beetroot" class="view-link" >View</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+    <div class="card">
+    <img src=".//public/img/brinjal.webp" class="card-img-top" alt="Brinjal">
+    <div class="card-body">
+      <h5 class="card-title">Brinjal, 500g</h5>
+      <p class="card-price"><b>M.R.P 37</b></p>
+      <p class="card-delivery">Free delivery starting from Tomorrow 7 am - 10 am on orders over 499</p>
+      <div class="card-actions">
+      <button class="add-btn" (click)="addToCart({ name: 'Brinjal' , price:37 ,  weight:'500g', img: './/public/img/brinjal.webp' })">Add to cart</button>
+      <a  routerLink="/brinjal"  class="view-link" >View</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+</div>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <b>TENDER CUTS</b>
+    </div>
+    <div class="footer-contact">
+      <b>
+        HMT Colony P.O <br>
+        Kalamassery-683 503 <br>
+        Cochin, Kerala <br>
+        Telephone: +91 484 2754000, 2411460 to 63 <br>
+        Fax: +91 484 2411468, 2754468 <br>
+        Email: cstendercutsgmail.com <br>
+        Phone: 9543754375
+      </b>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <nav  class="navbar navbar-expand-lg bg-body-tertiary">
+  <div  class="container-fluid">
+    <div class="tender">
+    <a class="navbar-brand" href="#">TENDER CUTS</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="/home">Home</a>
+        
+        <a class="nav-link" href="/cart">Cart</a>
+        <a class="nav-link" href="/meat">Meat</a>
+        <a class="nav-link disabled" aria-disabled="true"></a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="veg">
+<div><b>VEGETABLE CATEGORIES</b></div>
+</div>
+
+
+
+<div class="cards-container">
+  <div class="card">
+    <img  src=".//public/img/carrot.jpg" class="card-img-top" alt="Carrot">
+    <div class="card-body">
+      <h5 class="card-title">Carrot, 500g</h5>
+      <p class="card-price"><b>M.R.P 40</b></p>
+      <p class="card-delivery">Free delivery starting from Tomorrow 7 am - 10 am on orders over 499</p>
+      <div class="card-actions">
+       <button class="add-btn" (click)="addToCart({ name: 'Carrot', price: 40, weight: '500g', img: './/public/img/carrot.jpg' })">Add to cart</button>
+      <a  routerLink="/carrot" class="view-link" >View</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src=".//public/img/cauliflower.jpg" class="card-img-top" alt="Cauliflower">
+    <div class="card-body">
+      <h5 class="card-title">Cauliflower, 500g</h5>
+      <p class="card-price"><b>M.R.P 25</b></p>
+      <p class="card-delivery">Free delivery starting from Tomorrow 7 am - 10 am on orders over 499</p>
+      <div class="card-actions">
+      <button class="add-btn" (click)="addToCart({ name: 'Cauliflower' , price:25 , weight: '500g', img: './/public/img/cauliflower.jpg' })">Add to cart</button>
+      <a  routerLink="/cauliflower" class="view-link" >View</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src=".//public/img/beetroot.jpg" class="card-img-top" alt="Beetroot">
+    <div class="card-body">
+      <h5 class="card-title">Beetroot, 500g</h5>
+      <p class="card-price"><b>M.R.P 20</b></p>
+      <p class="card-delivery">Free delivery starting from Tomorrow 7 am - 10 am on orders over 499</p>
+      <div class="card-actions">
+      <button class="add-btn" (click)="addToCart({ name: 'Beetroot' , price:20 , weight:'500g',img: './/public/img/beetroot.jpg' })">Add to cart</button>
+      <a  routerLink="/beetroot" class="view-link" >View</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src=".//public/img/brinjal.webp" class="card-img-top" alt="Brinjal">
+    <div class="card-body">
+      <h5 class="card-title">Brinjal, 500g</h5>
+      <p class="card-price"><b>M.R.P 37</b></p>
+      <p class="card-delivery">Free delivery starting from Tomorrow 7 am - 10 am on orders over 499</p>
+      <div class="card-actions">
+      <button class="add-btn" (click)="addToCart({ name: 'Brinjal' , price:37 ,  weight:'500g', img: './/public/img/brinjal.webp' })">Add to cart</button>
+      <a  routerLink="/brinjal"  class="view-link" >View</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div>
+  <div class="box3">
+    <div class="box4">
+      <div class="text1"><b>TENDER CUTS</b></div>
+    </div>
+    <div class="box5">
+      <div class="text">
+      <b>
+      HMT Colony P.O <br>
+      Kalamassery-683 503 <br>
+      Cochin, Kerala <br>
+      Telephone: +91 484 2754000, 2411460 to 63 <br>
+      Fax: +91 484 2411468, 2754468 <br> 
+      Email: cstendercutsgmail.com <br>
+      Phone: 9543754375
+      </b>
+      </div>
+    </div>
+  </div>
+</div>
+
+  -->

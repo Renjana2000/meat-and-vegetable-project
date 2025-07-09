@@ -1,0 +1,31 @@
+
+
+<div class="box1" *ngIf="!paymentDone">
+  <div class="title">ORDER SUMMARY</div>
+
+  <div class="row total">
+    <div>Total Items</div>
+    <div>{{ totalItems }}</div>
+  </div>
+
+  <div class="row total">
+    <div>Total Price</div>
+    <div>₹{{ totalPrice }}</div>
+  </div>
+
+  <div class="button-container">
+    <button (click)="payOrder()">Pay Now</button>
+  </div>
+</div>
+
+<div class="box2" *ngIf="paymentDone">
+  <div class="success-icon">&#10004;</div>
+  <div class="success-text">Payment Successfully</div>
+  <div>
+  <button routerLink="/home" class="home-btn">Go to Home</button>
+</div>
+</div>
+
+
+
+

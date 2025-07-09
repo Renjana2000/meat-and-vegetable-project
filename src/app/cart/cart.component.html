@@ -1,0 +1,247 @@
+<!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <div class="tender">
+      <a class="navbar-brand" href="#">TENDER CUTS</a>
+    </div>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
+        <a class="nav-link" routerLink="/cart">Cart</a>
+        <a class="nav-link" routerLink="/vegetable">Vegetable</a>
+        <a class="nav-link" routerLink="/meat">Meat</a>
+      </div>
+    </div>
+  </div>
+</nav> -->
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand tender" href="#">TENDER CUTS</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/cart">Cart</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/vegetable">Vegetable</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/meat">Meat</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+<div class="cart-container">
+  <div *ngIf="items.length === 0" class="no-items-message">
+    No items in cart.
+  </div>
+
+  <div *ngFor="let item of items; let i = index" class="cart-item">
+    <img [src]="item.img" alt="{{item.name}}" />
+    <div class="cart-details">
+      <p class="item-name">{{ item.name }}</p>
+      <p class="item-price">₹{{ item.price }}</p>
+      <p class="item-weight">{{ item.weight }}</p>
+      <div class="quantity-controls">
+        <button (click)="decrementQuantity(i)">-</button>
+        <span>{{ item.quantity || 1 }}</span>
+        <button (click)="incrementQuantity(i)">+</button>
+      </div>
+      <button class="delete-btn" (click)="removeFromCart(i)">Remove</button>
+    </div>
+  </div>
+</div>
+
+<div class="cart-summary">
+  <div class="total-price">Total Price : ₹{{ totalPrice }}</div>
+  <div class="total-price">Total Items : {{ totalItems }}</div>
+  <div class="summary-buttons">
+    <button (click)="save()" class="save-btn" [disabled]="items.length === 0">
+      Save
+    </button>
+    <button
+      routerLink="/payment"
+      class="payment-btn"
+      [disabled]="items.length === 0"
+    >
+      Proceed to Payment
+    </button>
+    <button
+      routerLink="/billing"
+      class="save-btn"
+      [disabled]="items.length === 0"
+    >
+      Detailed Billing
+    </button>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-brand">
+    <div class="footer-title"><b>TENDER CUTS</b></div>
+  </div>
+  <div class="footer-contact">
+    <div class="text">
+      <b>
+        HMT Colony P.O <br />
+        Kalamassery-683 503 <br />
+        Cochin, Kerala <br />
+        Telephone: +91 484 2754000, 2411460 to 63 <br />
+        Fax: +91 484 2411468, 2754468 <br />
+        Email: cstendercutsgmail.com <br />
+        Phone: 9543754375
+      </b>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <nav  class="navbar navbar-expand-lg bg-body-tertiary">
+  <div  class="container-fluid">
+    <div class="tender">
+    <a class="navbar-brand" href="#">TENDER CUTS</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="/home">Home</a>
+        <a class="nav-link" href="/cart">Cart</a>
+        <a class="nav-link" href="/vegetable">Vegetable</a>
+        <a class="nav-link" href="/meat">Meat</a>
+        <a class="nav-link disabled" aria-disabled="true"></a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<div class="cart-container">
+  <div *ngIf="items.length === 0" class="no-items-message">
+    No items in cart.
+  </div>
+
+  <div *ngFor="let item of items; let i = index" class="cart-item">
+    <img [src]="item.img" alt="{{item.name}}" (click)="addToTotalPrice(item)">
+    <div class="cart-details">
+      <p class="item-name">{{item.name}}</p>
+      <p class="item-price">₹{{item.price}}</p>
+      <p class="item-weight">{{item.weight}}</p>
+      <div class="quantity-controls">
+        <button (click)="decrementQuantity(i)">-</button>
+        <span>{{item.quantity || 1}}</span>
+        <button (click)="incrementQuantity(i)">+</button>
+      </div>
+      <button class="delete-btn" (click)="removeFromCart(i)">Remove</button>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="cart-summary">
+  <div class="total-price">
+    Total Price  :  ₹{{ totalPrice }}
+  </div>
+  <div class="total-price">Total Items : {{ totalItems }}</div>
+  <div class="summary-buttons">
+  <button (click)="save()" class="save-btn" [disabled]="items.length === 0">Save</button>
+  <button routerLink="/payment" class="payment-btn" [disabled]="items.length === 0">Proceed to Payment</button>
+  <button routerLink="/billing" class="save-btn" [disabled]="items.length === 0">Detailed Billing</button>
+</div>
+</div>
+
+
+
+
+<footer class="box3">
+  <div class="box4">
+    <div class="text1"><b>TENDER CUTS</b></div>
+  </div>
+  <div class="box5">
+    <div class="text">
+      <b>
+      HMT Colony P.O <br>
+      Kalamassery-683 503 <br>
+      Cochin, Kerala <br>
+      Telephone: +91 484 2754000, 2411460 to 63 <br>
+      Fax: +91 484 2411468, 2754468 <br> 
+      Email: cstendercutsgmail.com <br>
+      Phone: 9543754375
+      </b>
+    </div>
+  </div>
+</footer>
+
+ -->

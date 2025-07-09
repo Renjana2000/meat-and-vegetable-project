@@ -1,0 +1,39 @@
+
+<div class="container">
+
+<div class="box1">
+    <div><img src=".//public/img/login.jpg" alt=""></div>
+</div>
+
+
+<div class="box2">
+
+<div>
+  <h1>LOGIN PAGE</h1>
+</div>
+
+<form #registrationForm="ngForm">
+
+  <div>
+    Username : 
+    <input type="text" name="userName" #userName="ngModel" required [(ngModel)]="user.userName">
+    <span *ngIf="userName.invalid && userName.touched">Username required</span>
+  </div>
+
+  <div class="password">
+  Password : 
+  <input type="password" name="password" #password="ngModel" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  [(ngModel)]="user.password">
+  <span *ngIf="password.invalid && password.touched">Password required</span>
+  <span *ngIf="password.errors?.['pattern']">Enter correct password</span>
+</div>
+
+  <div>
+    <button  [disabled] = "!registrationForm.valid"  (click)="login()" routerLink="/home">Login</button>
+  </div>
+
+</form>
+
+</div>
+
+</div>
+

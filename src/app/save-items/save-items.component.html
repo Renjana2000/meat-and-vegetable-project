@@ -1,0 +1,49 @@
+<nav  class="navbar navbar-expand-lg bg-body-tertiary">
+  <div  class="container-fluid">
+    <div class="tender">
+    <a class="navbar-brand" href="#">TENDER CUTS</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="/home">Home</a>
+        <a class="nav-link" href="/cart">Cart</a>
+        <a class="nav-link" href="#"></a>
+        <a class="nav-link disabled" aria-disabled="true"></a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+<div>
+  <table>
+    <tr>
+      <th>No</th>
+      <th>DATE</th>
+      <th>ITEM NAME</th>
+      <th>WEIGHT</th>
+      <th>RATE</th>
+      <th>QUANTITY</th>
+      <th>TOTAL</th>
+    </tr>
+    <tr *ngFor="let item of savedItems; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ item.date }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.weight }}</td>
+      <td>{{ item.price }}</td>
+      <td>{{ item.quantity || 1 }}</td>
+      <td>{{ (item.price * (item.quantity || 1)).toFixed(2) }}</td>
+    </tr>
+  </table>
+</div>
+
+<div class="total">
+  Total : ₹{{ total.toFixed(2) }}
+</div>
+
+

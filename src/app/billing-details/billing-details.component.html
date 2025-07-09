@@ -1,0 +1,172 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand tender" href="#">TENDER CUTS</a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/cart">Cart</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/vegetable">Vegetable</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/meat">Meat</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div>
+  <table class="billing-table">
+    <tr>
+      <th class="header" colspan="6">
+        <div class="header-content">
+          <span class="shop">SHOP RECEIPT</span>
+          <span class="super">TENDER CUT Supermarket</span>
+          <span class="earth">PLANET EARTH</span>
+          <span class="ph">PH : 9026138475</span>
+          <span class="date">Date: {{ todayDate }}</span>
+        </div>
+      </th>
+    </tr>
+    <tr class="tr">
+      <th>No</th>
+      <th>Item Name</th>
+      <th>Weight</th>
+      <th>Rate</th>
+      <th>Quantity</th>
+      <th>Total Amount</th>
+    </tr>
+    <tr class="tr" *ngFor="let item of items; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.weight }}</td>
+      <td>{{ item.price }}</td>
+      <td>{{ item.quantity || 1 }}</td>
+      <td>{{ item.price * (item.quantity || 1) }}</td>
+    </tr>
+    <tr>
+      <td colspan="5" class="total-label">Total Amount</td>
+      <td class="total-value">₹{{ totalAmount }}</td>
+    </tr>
+  </table>
+</div>
+
+<div class="tha">
+  <div class="header-content">
+    <span class="shop">THANK YOU</span>
+    <span class="shop">HAVE A NICE DAY</span>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<nav  class="navbar navbar-expand-lg bg-body-tertiary" >
+  <div  class="container-fluid">
+    <div class="tender">
+    <a class="navbar-brand" href="#">TENDER CUTS</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="/home">Home</a>
+        <a class="nav-link" href="/cart">Cart</a>
+        <a class="nav-link" href="#"></a>
+        <a class="nav-link disabled" aria-disabled="true"></a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<div>
+<table class="billing-table">
+  <tr>
+    <th class="header" colspan="6">
+      <div class="header-content">
+        <span class="shop">SHOPE RECEIPT</span>
+        <span class="super">TENDER CUT Supermarket</span>
+        <span class="earth">PLANET EARTH</span>
+        <span class="ph">PH : 9026138475</span>
+        <span class="date">Date: {{ todayDate }}</span>
+      </div>
+    </th>
+  </tr>
+  <tr class="tr">
+    <th>No</th>
+    <th>Item Name</th>
+    <th>Weight</th>
+    <th>Rate</th>
+    <th>Quantity</th>
+    <th>Total Amount</th>
+  </tr>
+  <tr class="tr" *ngFor="let item of items; let i = index">
+    <td>{{ i + 1 }}</td>
+    <td>{{ item.name }}</td>
+    <td>{{ item.weight }}</td>
+    <td>{{ item.price }}</td>
+    <td>{{ item.quantity || 1 }}</td>
+    <td>{{ item.price * (item.quantity || 1) }}</td>
+  </tr>
+  <tr>
+    <td colspan="5" class="total-label">Total Amount</td>
+    <td class="total-value">₹{{ totalAmount }}</td>
+  </tr>
+</table>
+</div>
+
+
+
+<div class="tha">
+<div class="header-content">
+  <span class="shop" >THANK YOU</span>
+  <span class="shop">HAVE A NICE DAY</span>
+</div>
+</div>  -->

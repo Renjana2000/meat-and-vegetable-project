@@ -1,0 +1,52 @@
+<div class="container">
+
+<div class="box1">
+    <div>
+        <img src=".//public/img/register.jpg" alt="">
+    </div>
+</div>
+
+
+
+<div class="box2">
+
+  <div><h1>REGISTRATION PAGE</h1></div>
+
+  <form #registrationForm="ngForm">
+
+    <div>
+      Username : 
+      <input type="text" name="userName" #userName="ngModel" required [(ngModel)]="user.userName">
+      <span *ngIf="userName.invalid && userName.touched">Username required</span>
+    </div>
+
+   
+<div>
+  Email : 
+  <input type="text" name="email" #email="ngModel" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" [(ngModel)]="user.email">
+  <span *ngIf="email.invalid && email.touched">Email required</span>
+  <span *ngIf="email.errors?.['pattern']">Enter correct email</span>
+</div>
+
+
+
+<div class="password">
+  Password : 
+  <input type="password" name="password" #password="ngModel" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  [(ngModel)]="user.password">
+  <span *ngIf="password.invalid && password.touched">Password required</span>
+  <span *ngIf="password.errors?.['pattern']">Enter correct password</span>
+</div>
+
+
+
+    <div>
+      <button  [disabled] ="!registrationForm.valid" (click)="register()" routerLink="/login">Register</button>
+    </div>
+
+  </form>
+</div>
+
+</div> 
+ 
+
+
