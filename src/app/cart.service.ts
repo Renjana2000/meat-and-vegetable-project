@@ -55,25 +55,7 @@ export class CartService {
 
  
 
-// saveItems(items: any[]) {
-//   const saved = localStorage.getItem('savedItems');
-//   let savedItems = [];
-//   if (saved) {
-//     savedItems = JSON.parse(saved);
-//   }
 
-
-//   const itemsWithDate = items.map(item => ({
-//     ...item,
-//     date: new Date().toLocaleDateString()
-//   }));
-
-
-//   savedItems = [...savedItems, ...itemsWithDate];
-//   this.savedItems = savedItems;
-//   this.savedItemsSubject.next(this.savedItems);
-//   localStorage.setItem('savedItems', JSON.stringify(this.savedItems));
-// }
 
 
 
