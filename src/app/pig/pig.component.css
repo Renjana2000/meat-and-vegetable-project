@@ -12,6 +12,13 @@
   font-style: italic;
 }
 
+
+.imgback {
+  height: 30px; /* adjust based on your navbar height */
+  width: auto;
+}
+
+
 .boxes-container {
   display: flex;
   flex-wrap: wrap;

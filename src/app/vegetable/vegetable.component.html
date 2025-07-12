@@ -1,21 +1,51 @@
 
 
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">TENDER CUTS</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  <div class="container-fluid position-relative">
+
+    <!-- Left image -->
+    <a>
+      <img routerLink="/home" class="imgback" src=".//public/assets/img/backbutton.jpg" alt="">
+    </a>
+
+    <!-- Centered brand -->
+    <a class="navbar-brand tender position-absolute top-50 start-50 translate-middle" href="#">
+      TENDER CUTS
+    </a>
+
+    <!-- Right toggler and nav links -->
+    <button
+      class="navbar-toggler ms-auto"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav ms-auto">
-        <a class="nav-link active" aria-current="page" href="/home">Home</a>
-        <a class="nav-link" href="/cart">Cart</a>
-        <a class="nav-link" href="/meat">Meat</a>
-      </div>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/cart">Cart</a>
+          <a class="nav-link" href="/meat">Meat</a>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
+
+
+
+
+
+
 
 <div class="veg">
   <div><b>VEGETABLE CATEGORIES</b></div>
@@ -26,14 +56,15 @@
 
 
   <div class="card">
-    <img  src=".//public/assets/img/carrot.jpg" class="card-img-top" alt="Carrot">
+    <img routerLink="/carrot" src=".//public/assets/img/carrot.jpg" class="card-img-top" alt="Carrot">
     <div class="card-body">
-      <h5 class="card-title">Carrot, 500g</h5>
+      <h5 class="card-title">Carrot</h5>
+      <p class="card-weight">500 g</p>
       <p class="card-price"><b>M.R.P 40</b></p>
-      <p class="card-delivery">Free delivery starting from Tomorrow 7 am - 10 am on orders over 499</p>
+      <!-- <p class="card-delivery">Free delivery starting from Tomorrow 7 am - 10 am on orders over 499</p> -->
       <div class="card-actions">
        <button class="add-btn" (click)="addToCart({ name: 'Carrot', price: 40, weight: '500g', img: './/public/assets/img/carrot.jpg' })">Add to cart</button>
-      <a  routerLink="/carrot" class="view-link" >View</a>
+      <!-- <a  routerLink="/carrot" class="view-link" >View</a> -->
       </div>
     </div>
   </div>
@@ -41,14 +72,15 @@
 
 
    <div class="card">
-    <img src=".//public/assets/img/cauliflower.jpg" class="card-img-top" alt="Cauliflower">
+    <img routerLink="/cauliflower" src=".//public/assets/img/cauliflower.jpg" class="card-img-top" alt="Cauliflower">
     <div class="card-body">
-      <h5 class="card-title">Cauliflower, 500g</h5>
+      <h5 class="card-title">Cauliflower</h5>
+      <p class="card-weight">500 g</p>
       <p class="card-price"><b>M.R.P 25</b></p>
-      <p class="card-delivery">Free delivery starting from Tomorrow 7 am - 10 am on orders over 499</p>
+      <!-- <p class="card-delivery">Free delivery starting from Tomorrow 7 am - 10 am on orders over 499</p> -->
       <div class="card-actions">
       <button class="add-btn" (click)="addToCart({ name: 'Cauliflower' , price:25 , weight: '500g', img: './/public/assets/img/cauliflower.jpg' })">Add to cart</button>
-      <a  routerLink="/cauliflower" class="view-link" >View</a>
+      <!-- <a  routerLink="/cauliflower" class="view-link" >View</a> -->
       </div>
     </div>
   </div>
@@ -56,14 +88,15 @@
 
 
     <div class="card">
-    <img src=".//public/assets/img/beetroot.jpg" class="card-img-top" alt="Beetroot">
+    <img routerLink="/beetroot" src=".//public/assets/img/beetroot.jpg" class="card-img-top" alt="Beetroot">
     <div class="card-body">
-      <h5 class="card-title">Beetroot , 500g</h5>
+      <h5 class="card-title">Beetroot</h5>
+      <p class="card-weight">500 g</p>
       <p class="card-price"><b>M.R.P 20</b></p>
-      <p class="card-delivery">Free delivery starting from Tomorrow 7 am - 10 am on orders over 499</p>
+      <!-- <p class="card-delivery">Free delivery starting from Tomorrow 7 am - 10 am on orders over 499</p> -->
       <div class="card-actions">
       <button class="add-btn" (click)="addToCart({ name: 'Beetroot' , price:20 , weight:'500g',img: './/public/assets/img/beetroot.jpg' })">Add to cart</button>
-      <a  routerLink="/beetroot" class="view-link" >View</a>
+      <!-- <a  routerLink="/beetroot" class="view-link" >View</a> -->
       </div>
     </div>
   </div>
@@ -72,26 +105,25 @@
 
 
     <div class="card">
-    <img src=".//public/assets/img/brinjal.webp" class="card-img-top" alt="Brinjal">
+    <img routerLink="/brinjal" src=".//public/assets/img/brinjal.webp" class="card-img-top" alt="Brinjal">
     <div class="card-body">
-      <h5 class="card-title">Brinjal, 500g</h5>
+      <h5 class="card-title">Brinjal</h5>
+      <p class="card-weight">500 g</p>
       <p class="card-price"><b>M.R.P 37</b></p>
-      <p class="card-delivery">Free delivery starting from Tomorrow 7 am - 10 am on orders over 499</p>
+      <!-- <p class="card-delivery">Free delivery starting from Tomorrow 7 am - 10 am on orders over 499</p> -->
       <div class="card-actions">
       <button class="add-btn" (click)="addToCart({ name: 'Brinjal' , price:37 ,  weight:'500g', img: './/public/assets/img/brinjal.webp' })">Add to cart</button>
-      <a  routerLink="/brinjal"  class="view-link" >View</a>
+      <!-- <a  routerLink="/brinjal"  class="view-link" >View</a> -->
       </div>
     </div>
   </div>
-
-
-
-
-
-
 </div>
 
-<footer class="footer">
+
+
+
+
+<!-- <footer class="footer">
   <div class="footer-container">
     <div class="footer-brand">
       <b>TENDER CUTS</b>
@@ -108,7 +140,7 @@
       </b>
     </div>
   </div>
-</footer>
+</footer> -->
 
 
 

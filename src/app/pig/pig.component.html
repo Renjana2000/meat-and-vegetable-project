@@ -1,9 +1,21 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand tender" href="#">TENDER CUTS</a>
 
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid position-relative">
+
+    <!-- Left image -->
+    <a>
+      <img routerLink="/meat" class="imgback" src=".//public/assets/img/backbutton.jpg" alt="">
+    </a>
+
+    <!-- Centered brand -->
+    <a class="navbar-brand tender position-absolute top-50 start-50 translate-middle" href="#">
+      TENDER CUTS
+    </a>
+
+    <!-- Right toggler and nav links -->
     <button
-      class="navbar-toggler"
+      class="navbar-toggler ms-auto"
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#navbarNav"
@@ -14,8 +26,8 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/home">Home</a>
         </li>
@@ -26,6 +38,9 @@
     </div>
   </div>
 </nav>
+
+
+
 
 <div class="boxes-container">
   <div class="box1">
@@ -52,11 +67,15 @@
         <li>Material Features: Non-Vegetarian, No preservatives, farm-raised</li>
       </ul>
     </div>
-    <button class="add-btn" routerLink="/meat">Meat</button>
+    <!-- <button class="add-btn" routerLink="/meat">Meat</button> -->
   </div>
 </div>
 
-<footer class="footer">
+
+
+
+
+<!-- <footer class="footer">
   <div class="footer-left">
     <div class="text1"><b>TENDER CUTS</b></div>
   </div>
@@ -73,7 +92,7 @@
       </b>
     </div>
   </div>
-</footer>
+</footer> -->
 
 
 
