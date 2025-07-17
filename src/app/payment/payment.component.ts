@@ -18,7 +18,7 @@ export class PaymentComponent implements OnInit {
    paymentDone: boolean = false;
 
 
-   constructor(private cartService: CartService) { }
+   constructor(private cartService: CartService , ) { }
 
 
      ngOnInit(): void {
@@ -48,9 +48,9 @@ export class PaymentComponent implements OnInit {
 
 
     payOrder() {
-    
+    this.cartService.clearCart();
     this.paymentDone = true;
-
+    
     
   }
 

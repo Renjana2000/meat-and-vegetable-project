@@ -1,12 +1,22 @@
 
 
- .container-fluid {
+.offcanvas {
+  width: 250px; /* adjust drawer width if required */
+}
+
+
+
+.container-fluid {
   background-color: black;
 }
 
 .navbar-brand,
 .navbar-nav .nav-link {
   color: white !important;
+}
+
+body {
+  padding-top: 70px; /* Ensures first item doesn't hide behind navbar */
 }
 
 .tender {
@@ -19,17 +29,22 @@
   object-fit: cover;
 }
 
+#carouselExample {
+  margin-top: 55px; /* matches navbar height */
+}
+
+
 .container {
   display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
+  flex-direction: column;
+  align-items: center;
   margin: 20px;
   margin-top: 50px;
 }
 
 .box1 {
   width: 100%;
-  max-width: 1500px;
+  max-width: 350px;
   padding: 10px;
   background-color: #f8f8f8;
   font-weight: bold;
@@ -40,23 +55,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-left: auto; */
-  margin-right: 25px;
-  margin-bottom: 20px;
-  
+  margin: 0 auto 20px auto;
 }
 
 .box2 {
   width: 100%;
-  max-width: 1500px;
+  max-width: 350px;
   padding: 15px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 2px 2px 5px grey;
   font-size: 14px;
   line-height: 1.5;
-  margin-right: 25px;
+  margin: 0 auto 20px auto;
 }
+
+
 
 .category {
   font-size: 60px;
@@ -72,26 +86,13 @@
   margin: 30px;
 }
 
-/* .card1,
+.card1,
 .card2 {
   display: flex;
   justify-content: center;
   width: 100%;
   max-width: 500px;
-} */
-
-
-
-.card1,
-.card2 {
-  display: flex;
-  justify-content: center;
-  width: 45%; /* change from 100% to 45% */
-  max-width: 500px;
 }
-
-
-
 
 .card {
   width: 100%;
@@ -181,6 +182,11 @@
 
 
 
+/* RESPONSIVE */
+
+
+
+
 @media (max-width: 1200px) {
   .box1 {
     font-size: 40px;
@@ -197,6 +203,7 @@
   .box1 {
     font-size: 35px;
     padding: 8px;
+
   }
   .category {
     font-size: 40px;
@@ -223,6 +230,9 @@
   .accordion {
     margin: 10px;
   }
+  .card-img-top {
+    height: 200px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -241,13 +251,6 @@
   .card-img-top {
     height: 180px;
   }
-
-  @media (max-width: 576px) {
-  .card1,
-  .card2 {
-    width: 45%; /* side by side even on small screens */
-  }
-}
 }
 
 
@@ -263,7 +266,26 @@
 
 
 
-/* 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  
 .container-fluid{
     background-color: black;
 }
@@ -454,4 +476,4 @@
 
 
 
- */
+  */

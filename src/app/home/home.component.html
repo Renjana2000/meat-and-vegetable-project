@@ -1,23 +1,39 @@
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       TENDER CUTS
     </a>
-    <!-- Navbar toggler for mobile -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- Navbar toggler for offcanvas -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav ms-auto">
-        <a class="nav-link active" aria-current="page" href="/home">Home</a>
-        <a class="nav-link" href="/cart">Cart</a>
+
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">TENDER CUTS</h5>
+        <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas"
+          aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/cart">Cart</a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
 </nav>
+
+
+
 
 
 <div id="carouselExample" class="carousel slide">
@@ -37,13 +53,6 @@
 </div>
 
 
-<!-- <div class="container">
-  <div class="box1">About Our Meats And Vegetables</div>
-  <div class="box2">
-    We offer the highest quality fresh meats sourced directly from trusted farms to ensure tenderness, juiciness, and rich flavour in every cut. Whether you need chicken, mutton, or premium beef, our meats are cleaned and packed hygienically to retain freshness for longer. Perfect for daily meals, family gatherings, or special occasions, our selection promises taste and nutrition without compromise. Our wide variety of vegetables are handpicked daily to bring you the best of nature’s goodness. From leafy greens and vibrant carrots to fresh beans, cucumbers, and seasonal produce, we guarantee quality that keeps your cooking healthy and delicious. Shop with us today for fresh meats and vegetables that nourish your family with every bite.
-  </div>
-</div> -->
-
 
 <div>
   <div class="category"><b>OUR CATEGORIES</b></div>
@@ -60,6 +69,7 @@
     </div>
   </div>
 
+  
   <div class="card2">
     <div class="card">
       <img src=".//public/assets/img/meat.avif" class="card-img-top" alt="...">
@@ -74,16 +84,16 @@
 
 
 
-<div class="container">
+<!-- <div class="container">
   <div class="box1">About Our Meats And Vegetables</div>
   <div class="box2">
     We offer the highest quality fresh meats sourced directly from trusted farms to ensure tenderness, juiciness, and rich flavour in every cut. Whether you need chicken, mutton, or premium beef, our meats are cleaned and packed hygienically to retain freshness for longer. Perfect for daily meals, family gatherings, or special occasions, our selection promises taste and nutrition without compromise. Our wide variety of vegetables are handpicked daily to bring you the best of nature’s goodness. From leafy greens and vibrant carrots to fresh beans, cucumbers, and seasonal produce, we guarantee quality that keeps your cooking healthy and delicious. Shop with us today for fresh meats and vegetables that nourish your family with every bite.
   </div>
-</div>
+</div> -->
 
 
 
-
+ 
 <div class="acc">
   <div><b>TenderCuts Farm Fresh Meat & Fresh vegetables</b></div>
 </div>
@@ -124,7 +134,8 @@
       <div class="accordion-body">At TenderCuts, we do not believe in pre-packaging meats or vegetables. We begin processing your order – from cleaning and cutting to packing the meat and vegetables in vacuum-sealed bags – only after you place the order. What’s more, you can track your order every step of the way with the TenderCuts Freshness Tracker built into our online delivery app.</div>
     </div>
   </div>
-</div>
+</div>  
+
 
 
 <!-- <div class="box3">

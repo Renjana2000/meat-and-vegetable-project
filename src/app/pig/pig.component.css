@@ -1,3 +1,8 @@
+.offcanvas {
+  width: 250px; /* adjust drawer width if required */
+}
+
+
 
 .container-fluid {
   background-color: black !important;
@@ -19,13 +24,25 @@
 }
 
 
+body {
+  padding-top: 70px; /* Ensures first item doesn't hide behind navbar */
+}
+
+
 .boxes-container {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
 
-.box1, .box2 {
+.box1{
+  width: 50%;
+  box-sizing: border-box;
+  padding: 16px;
+  margin-top: 50px;
+}
+
+.box2 {
   width: 50%;
   box-sizing: border-box;
   padding: 16px;

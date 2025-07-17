@@ -85,11 +85,6 @@ saveItems(items: any[]) {
 
 
 
-
-
-
-
-
   getSavedItems() {
     const saved = localStorage.getItem('savedItems');
     if (saved) {

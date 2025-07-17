@@ -1,8 +1,4 @@
 
-/* 
-nav.navbar {
-  height: auto !important;
-}
 
 .container-fluid {
   background-color: black !important;
@@ -15,23 +11,10 @@ nav.navbar {
 
 .tender {
   font-style: italic;
-} */
-
-
-
-
-
-.container-fluid {
-  background-color: black !important;
 }
 
-.navbar-brand,
-.navbar-nav .nav-link {
-  color: white !important;
-}
-
-.tender {
-  font-style: italic;
+body {
+  padding-top: 70px; /* Ensures first item doesn't hide behind navbar */
 }
 
 
@@ -41,14 +24,10 @@ nav.navbar {
 }
 
 
-
-
-
-
-
 .billing-table {
   border-collapse: collapse;
   margin: 0 auto;
+   margin-top: 50px;
 }
 
 .billing-table, .billing-table th, .billing-table td {

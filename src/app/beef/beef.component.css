@@ -1,3 +1,10 @@
+
+.offcanvas {
+  width: 250px; /* adjust drawer width if required */
+}
+
+
+
 .container-fluid {
   background-color: black !important;
 }
@@ -11,6 +18,10 @@
   font-style: italic;
 }
 
+
+body {
+  padding-top: 70px; /* Ensures first item doesn't hide behind navbar */
+}
 
 .imgback {
   height: 30px; /* adjust based on your navbar height */
